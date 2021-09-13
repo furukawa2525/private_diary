@@ -120,11 +120,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# 教科書
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-# dev
 from .settings import *
 
 ALLOWED_HOSTS = []
@@ -169,7 +169,6 @@ LOGGING = {
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-# common
 from django.contrib.messages import constants as messages
 
 MESSAGE_TAGS = {
@@ -185,11 +184,17 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
     'django.contrib.auth.backends.ModelBackend',
 )
+
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNTS_LOGOUT_REDIRECT_URL = 'account_login'
+
+LOGIN_REDIRECT_URL = 'diary:index'
+ACCOUNT_LOGOUT_REDIRECT_URL = 'account_login'
 ACCOUNT_LOOUT_ON_GET = True
 ACCOUNT_EMAIL_SUBJECT_PREFIX = ''
 DEFAULT_FROM_EMAIL = 'admin@example.com'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
