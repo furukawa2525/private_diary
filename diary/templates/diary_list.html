@@ -18,6 +18,7 @@
                     </div>
                     {% for diary in diary_list %}
                     <div class="post-preview">
+                        <!-- <a href="{% url 'diary:diary_detail' diary.pk %}"> -->
                         <a href="{% url 'diary:diary_detail' diary.pk %}">
                             <h2 class="post-title">
                                 {{ diary.title }}
