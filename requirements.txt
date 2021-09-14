@@ -2,9 +2,3 @@ Django==2.2.2
 pylint-django==2.4.4
 django-allauth==0.45.0
 pillow==8.3.2
-
-1.examフォルダ作成
-2.仮想環境作成
-3.hogeプロジェクト作成
-4.hogeapp追加
-5.hogeフォルダをzip
