@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Log In | PrivateDiary{% endblock %}
+{% block title %}Log In | Private Diary{% endblock %}
 
 {% block active_login %}active{% endblock %}
 
@@ -15,7 +15,7 @@
 
                 {{ form.as_p }}
 
-                {% if refirect_fields_value %}
+                {% if redirect_field_value %}
                   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
                 {% endif %}
                 <button class="btn btn-primary" type="submit">ログイン</button>
